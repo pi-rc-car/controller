@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.utils.datastructures import MultiValueDictKeyError
 
-
+import car_control
 
 def power(request):
 
@@ -19,7 +19,6 @@ def action(request):
         action = request.GET['action']
     except MultiValueDictKeyError:
         action = -1
-
 
     return HttpResponse(f"action={action}")
 
