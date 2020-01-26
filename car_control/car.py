@@ -23,6 +23,11 @@ def setup():
     GPIO.setmode(GPIO.BCM)
 
 def set_power(power=100.0):
+    if power > 100:
+        power = 100.0
+    elif power <= 0:
+        power = 0.1
+        
     for engine in engines:
         engine.set_power(power)
 
