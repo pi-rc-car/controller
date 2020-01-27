@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 
-from engine import Engine
+from .engine import Engine
 
 
 DEFAULT_POWER=0.1
