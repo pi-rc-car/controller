@@ -4,7 +4,7 @@ from rest_framework import status
 
 from sys import stderr
 
-from car_test.car import set_power, roll_front, roll_back, turn_right, turn_left, stop
+from car_control.car import set_power, roll_front, roll_back, turn_right, turn_left, stop
 
 def power(request):
 
