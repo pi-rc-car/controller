@@ -7,20 +7,21 @@ DEFAULT_POWER=0.1
 
 engines = []
 
-TOP_RIGHT_MOTOR=0
-TOP_LEFT_MOTOR=1
-BOTTOM_RIGHT_MOTOR=2
-BOTTOM_LEFT_MOTOR=3
+TOP_LEFT_MOTOR=0
+TOP_RIGHT_MOTOR=1
+BOTTOM_LEFT_MOTOR=2
+BOTTOM_RIGHT_MOTOR=3
 
 def setup():
     #set default pins for engines
-    engines.append(Engine((0, 0, 0)))
-    engines.append(Engine((0, 0, 0)))
-    engines.append(Engine((0, 0, 0)))
-    engines.append(Engine((0, 0, 0)))
+    engines.append(Engine((16, 20, 21)))
+    engines.append(Engine((13, 19, 26)))
+    engines.append(Engine((2, 3, 4)))
+    engines.append(Engine((17, 27, 22)))
 
     #set board mode
     GPIO.setmode(GPIO.BCM)
+    stop()
 
 def set_power(power=100.0):
     if power > 100:
